@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="/static/style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -11,18 +11,18 @@
     <script lang="js">
         function playMusic() {
             audioFiles = [
-                "1.mp3",
-                "2.mp3",
-                "3.mp3",
-                "4.mp3",
-                "5.mp3",
-                "6.mp3",
-                "7.mp3",
+                "/static/1.mp3",
+                "/static/2.mp3",
+                "/static/3.mp3",
+                "/static/4.mp3",
+                "/static/5.mp3",
+                "/static/6.mp3",
+                "/static/7.mp3",
             ]
             fileNumber = Math.floor(Math.random() * audioFiles.length);
-            const audio = `${fileNumber}.mp3`;
-            return audio;
+            return audioFiles[fileNumber];
         }
+        const audio = playMusic();
         const audioPlayer = document.getElementById('audioPlayer');
         audioPlayer.src = playMusic();
     </script>
