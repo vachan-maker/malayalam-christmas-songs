@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="js">
+        function playMusic() {
+            fileNumber = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
+            const audio = new Audio(`${fileNumber}.mp3`);
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = audio.src;
+            audio.play();
+        }
+    </script>
+    <audio id="audioPlayer" controls autoplay></audio>
+</body>
+</html>
