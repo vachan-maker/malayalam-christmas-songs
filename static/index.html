@@ -7,15 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <audio id="audioPlayer" controls autoplay></audio>
     <script lang="js">
         function playMusic() {
-            fileNumber = Math.floor(Math.random() * (7 - 1 + 1)) + 1;
-            const audio = new Audio(`${fileNumber}.mp3`);
-            const audioPlayer = document.getElementById('audioPlayer');
-            audioPlayer.src = audio.src;
-            audio.play();
+            audioFiles = [
+                "1.mp3",
+                "2.mp3",
+                "3.mp3",
+                "4.mp3",
+                "5.mp3",
+                "6.mp3",
+                "7.mp3",
+            ]
+            fileNumber = Math.floor(Math.random() * audioFiles.length);
+            const audio = `${fileNumber}.mp3`;
+            return audio;
         }
+        const audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.src = playMusic();
     </script>
-    <audio id="audioPlayer" controls autoplay></audio>
 </body>
 </html>
