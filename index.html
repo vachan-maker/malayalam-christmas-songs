@@ -4,63 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/snow.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <audio id="audioPlayer" controls autoplay></audio>
+    <script src="/scripts/snow.js"></script>
+    <div id="snow"></div>
+    <section>
+        <div class="box">
+            <div class="boxTitle">
+            <h1>Christmas Songs</h1>
+            <p>Refresh the page to listen to listen to another song!</p>
+            </div>
+            <div class="imageBox">
+                <img src="" alt="christmasGif" id="songImage" />
+            </div>
+            <div class="songDetails">
+                <h2 id="songTitle"></h2>
+                <audio id="audioPlayer" controls autoplay></audio>
+            </div>
+        </div>
+    </section>
     <script lang="js">
+        const audioFiles = [
+            {
+                title: "Muthe Muthe Ponnomale",
+                artist: "D Voice",
+                year: "unknown",
+                file: "/static/1.mp3",
+                gif: "/static/gifs/1.gif"
+            },
+            {
+                title: "Gabriyelinte Darshanam",
+                artist: "unknown",
+                year: 2016,
+                file: "/static/2.mp3",
+                gif: "/static/gifs/2.gif"
+
+            },
+            {
+                title: "Kannum Kannum Kaathirunnu",
+                artist: "Roy Puthoor",
+                year: 2024,
+                file: "/static/3.mp3",
+                gif: "/static/gifs/3.gif"
+            },
+            {
+                title: "Minna Minni Pole",
+                artist: "Fr. Shaji Thumpechirayil",
+                year: "unknown",
+                file: "/static/4.mp3",
+                gif: "/static/gifs/4.gif"
+            },
+            {
+                title: "Pulkudilil Kalthottilil",
+                artist: "K. J. Yesudas",
+                year: "unknown",
+                file: "/static/5.mp3",
+                gif: "/static/gifs/5.gif"
+            },
+            {
+                title: "Rajavin Rajavu",
+                artist: "K. G. Markose",
+                year: "unknown",
+                file: "/static/6.mp3",
+                gif: "/static/gifs/6.gif"
+            },
+            {
+                title: "Yahoodiyayile Oru Gramathil",
+                file: "/static/7.mp3",
+                gif: "/static/gifs/7.gif"
+            }
+        ];
         function playMusic() {
-            const audioFiles = [
-                {
-                    title: "Muthe Muthe Ponnomale",
-                    artist: "D Voice",
-                    year: "unknown",
-                    file: "/static/1.mp3"
-                },
-                {
-                    title: "Gabriyelinte Darshanam",
-                    artist: "unknown",
-                    year: 2016,
-                    file: "/static/2.mp3",
-                },
-                {
-                    title: "Kannum Kannum Kaathirunnu",
-                    artist: "Roy Puthoor",
-                    year: 2024,
-                    file: "/static/3.mp3"
-                },
-                {
-                    title: "Minna Minni Pole",
-                    artist: "Fr. Shaji Thumpechirayil",
-                    year: "unknown",
-                    file: "/static/4.mp3"
-                },
-                {
-                    title: "Pulkudilil Kalthottilil",
-                    artist: "K. J. Yesudas",
-                    year: "unknown",
-                    file: "/static/5.mp3"
-                },
-                {
-                    title: "Rajavin Rajavu",
-                    artist: "K. G. Markose",
-                    year:"unknown",
-                    file: "/static/6.mp3"
-                },
-                { file: "/static/7.mp3" }
-            ];
             fileNumber = Math.floor(Math.random() * audioFiles.length);
-            return audioFiles[fileNumber.file];
+            return audioFiles[fileNumber];
         }
         const audio = playMusic();
         const audioPlayer = document.getElementById('audioPlayer');
-        audioPlayer.src = playMusic();
+        audioPlayer.src = audio.file;
         let songTitle = document.getElementById("songTitle");
-        songTitle.innerText = audioFiles[audio]
+        songTitle.textContent = audio.title;
+        console.log(audio.title);
+        let songImage = document.getElementById("songImage");
+        songImage.src = audio.gif;
     </script>
-    <h2 id="songTitle"></h2>
 </body>
 
 </html>

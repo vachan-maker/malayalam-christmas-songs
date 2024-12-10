@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "music-metadata": "^10.6.2"
+    "music-metadata": "^10.6.2",
+    "pure-snow.js": "^2.1.0",
+    "wavesurfer.js": "^7.8.10"
   }
 }

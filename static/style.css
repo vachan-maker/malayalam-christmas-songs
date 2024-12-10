@@ -1,6 +1,36 @@
 :root {
-    --bg-color: #BB2528;
+    --bg-color: #d90429;
+    --secondary-color: #ef233c;
+}
+* {
+    margin: 0;
+    padding: 0;
 }
 body {
-    background-color:var(--bg-color) ;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+audio {
+    width: 100%;
 }
