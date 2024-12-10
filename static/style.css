@@ -1,23 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap');
 :root {
     --bg-color: #d90429;
-    --secondary-color: #ef233c;
+    --secondary-color: #62163b;
 }
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: sans-serif;
+    font-family: "Manjari",sans-serif;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: auto;
 }
 section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: auto;
 }
 .box {
     display: flex;
@@ -33,4 +35,12 @@ img {
 }
 audio {
     width: 100%;
+}
+#songTitle {
+    font-family: "Manjari";
+}
+#lyrics {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    padding: 1rem;
 }

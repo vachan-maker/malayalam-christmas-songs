@@ -24,24 +24,27 @@
             <div class="songDetails">
                 <h2 id="songTitle"></h2>
                 <audio id="audioPlayer" controls autoplay></audio>
+                <div id="lyrics"></div>
             </div>
         </div>
     </section>
     <script lang="js">
         const audioFiles = [
             {
-                title: "Muthe Muthe Ponnomale",
+                title: "മുത്തേ മുത്തേ മുത്തേ പോന്നോമനേ",
                 artist: "D Voice",
                 year: "unknown",
                 file: "/static/1.mp3",
-                gif: "/static/gifs/1.gif"
+                gif: "/static/gifs/1.gif",
+                lyrics: "\nമുത്തേ മുത്തേ മുത്തേ പോന്നോമനേ\nനിന്നെ കാണാൻ കൊതിച്ചൊരുനാളിൽ\nമഞ്ഞുപെയ്യുന്ന താഴ്‌വരയിൽ\nഒരു ജീവന്റെ കളിയാട്ടമായി\n\nമുത്തേ മുത്തേ മുത്തേ ചക്കരമുത്തെ\nനിന്നെ കാണാൻ കൊതിച്ചൊരുനാളിൽ\nമഞ്ഞു പെയ്യുന്ന താഴ്‌വരയിൽ\nഒരു സ്നേഹത്തിൻ കളിയാട്ടമായി\n\nദൂരെ ദൂരെ നിന്നും താരകങ്ങൾ പാടി\nരാജാധി രാജാവിവൻ\nസ്നേഹത്തിൻ തൂലിക മണ്ണിൽ ചലിപ്പിച്ച\nദേവാധിദൈവമിവൻ (2)\nമണ്ണിൽ സ്നേഹം എന്നും വാരിചൊരിഞ്ഞിടും സ്വർഗീയ നായകനായി (2)\n\n(മുത്തേ മുത്തേ മുത്തേ)\n\nതാഴെ ഇന്നു മന്നിൽ മാലോകരെല്ലാം\nഅലിവേറും നാഥാനായി കൈത്താളമോടെ വൈക്കോലുകൊണ്ടൊരു\nപുൽക്കൂടു പണിതിടുന്നു (2)\nസ്വർണ്ണ വർണമേറും പുൽക്കൂട്ടിൽ വാഴുന്ന ഉലകിന്റെ അധിപതിയെ (2)\n\n(മുത്തേ മുത്തേ മുത്തേ)\n"
             },
             {
                 title: "Gabriyelinte Darshanam",
                 artist: "unknown",
                 year: 2016,
                 file: "/static/2.mp3",
-                gif: "/static/gifs/2.gif"
+                gif: "/static/gifs/2.gif",
+                lyrics: "ഗബ്രിയേലിന്റെ ദര്‍ശനസാഫല്യമായ്..\nസർവ്വലോകർക്കും നന്മയേകും കാരുണ്യമായ്\nബെത്‌ലഹേമിന്റെ മാറിലൊരാരോമൽ ഉണ്ണി പിറന്നല്ലോ (3)\nവിണ്ണിൽ താരകൾ പുഞ്ചിരി തൂകി\nമണ്ണിൽ ഗ്ലോറിയ നാദങ്ങൾ പാടി\nഅവൻ പള്ളിക്കച്ച അണിഞ്ഞിട്ട് കണ്ണുംചിമ്മി തുറന്നിട്ട്\nകുഞ്ഞിക്കാലിട്ടടിക്കുകയായ് ..\nഎന്നും ആഘോഷം ഉണരുകയായ്\n\nഹേ.. ദൂരെനിന്നും തങ്കത്തിൽ\nസമ്മാനങ്ങൾ കൊണ്ടെത്തി.\nരാജാക്കന്മാർ ഒന്നായ് നീളെ\nവാഴ്ത്തിപ്പാടി.. യേ.. ഹല്ലേലൂയാ ...\nഎന്നും നിന്നെ ലോകത്തായ്‌\nഉള്ളോരെല്ലാം വാഴ്ത്തുന്നേ\nഇന്നും നിന്റെ സ്നേഹത്താലേ\nധന്യം ധന്യം വാണീടുന്നെ   \nരാജാധിരാജനേ എന്റെ മാർഗ്ഗദീപമേ\nഎൻ ജീവധാരയിൽ ചൈതന്യമാകണേ\nഉൾക്കൂട്ടിലെ പുൽപ്പായയിൽ\nകനിവായ് വാഴണേ ..\n\nപൊട്ടാസ് പൂക്കുറ്റി കമ്പിത്തിരി ...\nമത്താപ്പ് റോക്കറ്റ് ചെമ്പൂത്തിരി\nഗബ്രിയേലിന്റെ ദര്‍ശനസാഫല്യമായ്..\nസർവ്വലോകർക്കും നന്മയേകും കാരുണ്യമായ്\nബെത്‌ലഹേമിന്റെ മാറിലൊരാരോമൽ ഉണ്ണി പിറന്നല്ലോ\nഉണ്ണി പിറന്നല്ലോ.. ഉണ്ണി പിറന്നല്ലോ\nവിണ്ണിൽ താരകൾ പുഞ്ചിരി തൂകി\nമണ്ണിൽ ഗ്ലോറിയ നാദങ്ങൾ പാടി\nഅവൻ പള്ളിക്കച്ച അണിഞ്ഞിട്ട് കണ്ണുംചിമ്മി തുറന്നിട്ട്\nകുഞ്ഞിക്കാലിട്ടടിക്കുകയായ് ..\nഎന്നും ആഘോഷം ഉണരുകയായ്\n"
 
             },
             {
@@ -49,7 +52,8 @@
                 artist: "Roy Puthoor",
                 year: 2024,
                 file: "/static/3.mp3",
-                gif: "/static/gifs/3.gif"
+                gif: "/static/gifs/3.gif",
+                lyrics: "\n Kannum kannum kathirunnu\nManniloru paithalinay\nkathodu kathoram kettirunnu\nDaivaputhran Pirakkumennu\nKannum Kannum...(2) \n\nAakasha veedhiyil Malakha Maaravar\nSnehathin Nirakudamay\nThaaraattu paadi urackeeduvanayi\nManathaaril Ninachirunnu.(2)\n\nEthra nalla Snehathe Thanna Nalla\nNaadhane.\nMelle Raavil Padi Sthuthikkam.(2)\n\nKannum Kannum...(2)\n\nJeevante Paathayil Kaarunya Kanavaayi\nKarunardran Alinja Dinam(2)\n\nAalolamatti Laalichiduvannayi\nKripayil Niranjirunnu.(2)\n\nEthra Nalla Snehathe Thanna Nalla\nNaadhane.\nMelle Raavil Padi Sthuthikkam.(2)\n\nKannum Kannum...(2)\n"
             },
             {
                 title: "Minna Minni Pole",
@@ -73,9 +77,15 @@
                 gif: "/static/gifs/6.gif"
             },
             {
-                title: "Yahoodiyayile Oru Gramathil",
+                title: "യഹൂദിയായിലെ ഒരു ഗ്രാമത്തില്‍",
                 file: "/static/7.mp3",
-                gif: "/static/gifs/7.gif"
+                gif: "/static/gifs/7.gif",
+                lyrics: "\nയഹൂദിയായിലെ ഒരു ഗ്രാമത്തില്‍\nഒരു ധനുമാസത്തിന്‍ കുളിരും രാവില്‍\nരാപാര്‍ത്തിരുന്നോരജപാലകര്‍\nദേവനാദം കേട്ടു, ആമോദരായ്\n \nയഹൂദിയായിലെ ഒരു ഗ്രാമത്തില്‍\nഒരു ധനുമാസത്തിന്‍ കുളിരും രാവില്‍\nരാപാര്‍ത്തിരുന്നോരജപാലകര്‍\nദേവനാദം കേട്ടു, ആമോദരായ്\n \nവര്‍ണ്ണരാജികള്‍ വിടരും വാനില്‍\nവെള്ളിമേഘങ്ങള്‍ ഒഴുകും രാവില്‍\nതാരക രാജകുമാരിയോടൊത്തന്ന്\nതിങ്കള്‍ കല പാടി ഗ്ലോറിയാ\nഅന്നു തിങ്കള്‍ കല പാടി ഗ്ലോറിയാ\n \nതാരകം തന്നെ നോക്കീ ആട്ടിടയര്‍ നടന്നു\nതാരകം തന്നെ നോക്കീ ആട്ടിടയര്‍ നടന്നു\nതേജസു മുന്നില്‍ക്കണ്ടു\nഅവര്‍ ബത്ലഹേം തന്നില്‍ വന്നു.\nരാജാധിരാജന്റെ പൊന്‍ തിരുമേനി\nരാജാധിരാജന്റെ പൊന്‍ തിരുമേനി\nഅവര്‍ കാലിത്തൊഴുത്തില്‍ കണ്ടു\n \n(വര്‍ണ്ണരാജികള്‍ വിടരും...)\n \nമന്നവര്‍ മൂവരും ദാവീദിന്‍ സുതനേ\nമന്നവര്‍ മൂവരും ദാവീദിന്‍ സുതനേ\nകണ്ടു വണങ്ങിടുവാന്‍ അവര്‍ കാഴ്ചയുമായ് വന്നു\nകണ്ടു വണങ്ങിടുവാന്‍ അവര്‍ കാഴ്ചയുമായ് വന്നു\nദേവാധിദേവന്റെ തിരുസന്നിധിയില്‍\nദേവാധിദേവന്റെ തിരുസന്നിധിയില്‍\nഅവര്‍ കാഴ്ചകള്‍ വച്ചു വണങ്ങി\n \n(യഹൂദിയായിലെ...)\n"
+            },
+            {
+                title: "Kaalithozhuthil Pirannavane",
+                file: "/static/8.mp3",
+                gif: "/static/gifs/8.gif"
             }
         ];
         function playMusic() {
@@ -90,6 +100,9 @@
         console.log(audio.title);
         let songImage = document.getElementById("songImage");
         songImage.src = audio.gif;
+        let songLyrics = document.getElementById("lyrics")
+        songLyrics.innerHTML = audio.lyrics.replace(/\n/g, '<br>');
+        console.log(audio.lyrics);
     </script>
 </body>
 
