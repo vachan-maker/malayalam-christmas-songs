@@ -20,6 +20,8 @@ section {
     align-items: center;
     flex-direction: column;
     overflow: auto;
+    width: 50rem;
+    margin: 5rem auto;
 }
 .box {
     display: flex;
@@ -39,8 +41,14 @@ audio {
 #songTitle {
     font-family: "Manjari";
 }
+.songDetails {
+    width: 100%;
+}
 #lyrics {
     background-color: var(--secondary-color);
     border-radius: 5px;
     padding: 1rem;
+}
+.boxTitle {
+    width: 100%;
 }
